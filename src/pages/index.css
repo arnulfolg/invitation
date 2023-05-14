@@ -1,0 +1,44 @@
+body, html {
+	font-size: 20px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	text-align: left;
+}
+
+h1 {
+	font-family: 'Great Vibes', 'Times New Roman', Times, serif;
+	font-size: 3.6rem;
+	text-align: center;
+}
+h2 {
+	font-weight: 700;
+	font-size: 1.6rem;
+}
+h3 {
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+p, button, a, input, textarea, form {
+	font-weight: 300;
+	font-size: 1rem;
+}
+.small {
+	font-weight: 300;
+	font-size: 0.6rem;
+}
+
+.text_bold {
+	font-weight: 700;
+}
+
+.container {
+	max-width: 1040px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 666px) {
+	.container {
+		padding: 0 1rem;
+	}
+}

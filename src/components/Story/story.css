@@ -1,0 +1,33 @@
+.story_cards {
+	display: flex;
+	flex-direction: row;
+	gap: 2.1rem;
+	margin: 4rem 0 8rem 0;
+}
+
+.story_gif {
+	height: 3rem;
+}
+
+.story_cards .card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	justify-content: center;
+	align-content: center;
+}
+
+.story_cards picture {
+	text-align: center;
+}
+
+@media screen and (max-width: 666px) {
+	.story_cards {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.story_cards picture {
+		text-align: left;
+	}
+}

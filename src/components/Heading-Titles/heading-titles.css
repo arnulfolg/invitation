@@ -1,0 +1,25 @@
+.heading_titles {
+	width: 100%;
+	margin: 1rem 0;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.heading_titles::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: #33CCCC;
+	z-index: 0;
+	height: 6px;
+	width: 100%;
+	margin: auto;
+}
+
+.heading_titles h2 {
+	text-align: center;
+	background-color: white;
+	padding: 0 1rem;
+	z-index: 1;
+}

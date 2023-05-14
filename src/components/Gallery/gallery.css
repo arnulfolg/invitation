@@ -1,0 +1,19 @@
+.gallery_massonry {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 0.1rem;
+	margin: 4rem 0 6rem 0;
+}
+
+.gallery_image {
+	max-width: 100%;
+	aspect-ratio: 2/2.4;
+	object-fit:cover;
+}
+
+@media screen and (max-width: 666px) {
+	.gallery_massonry {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

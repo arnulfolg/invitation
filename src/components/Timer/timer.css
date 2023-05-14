@@ -1,0 +1,14 @@
+.timer {
+	font-size: 28px;
+	background: #fcf4e8;
+	display: flex;
+	gap: 1rem;
+	padding: 0.8rem 2rem;
+	border-radius: 0.4rem;
+}
+
+.date_month,
+.date_day,
+.date_hours {
+	font-weight: 600;
+}

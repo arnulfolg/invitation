@@ -1,0 +1,11 @@
+.footer {
+	background-color: #33CCCC;
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.footer .container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}

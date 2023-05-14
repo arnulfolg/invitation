@@ -1,0 +1,24 @@
+.reception {
+	display: grid;
+	grid-auto-rows: auto;
+	grid-template-columns: 1fr 2fr;
+	gap: 1rem;
+	margin: 4rem auto 8rem auto;
+}
+
+.reception_address {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.4rem;
+}
+
+.reception_info {
+	grid-column: 1 / -1;
+}
+
+@media screen and (max-width: 666px) {
+	.reception {
+		grid-template-columns: 1fr;
+	}
+}

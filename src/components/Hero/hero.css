@@ -1,0 +1,112 @@
+
+.feature_image{
+	height: 50dvh;
+	width: 100%;
+	aspect-ratio: auto;
+	overflow: hidden;
+	object-fit: cover;
+	margin-top: 0;
+	object-position: 50% 40%;
+	background-color: #33CCCC;
+}
+
+@media screen and (max-width: 666px) {
+	.feature_image {
+		object-position: 50% 50%;
+	}
+}
+
+.hero_picture {
+	position: relative;
+	height: 50dvh;
+	display: grid;
+}
+
+.hero_picture h1 {
+	position: absolute;
+	justify-self: center;
+	align-self: center;
+	color: #d99e08;
+	text-shadow: black 10px 8px 16px;
+}
+
+.hero_date {
+	height: 50dvh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: 'TEXT GIF'
+						 'TIMER TIMER';
+	justify-content: center;
+	align-items: center;
+	gap: 0 1rem;
+}
+
+.hero_gif {
+	height: 69%;
+	border-radius: 1rem;
+}
+
+.hero_date_text {
+	grid-area: TEXT;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	max-width: 200px;
+    justify-self: end;
+}
+
+.save_the_date {
+	font-size: 24px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(2, auto);
+	gap: 0.1rem;
+}
+
+.hero_date_img {
+	grid-area: GIF;
+	height: 40dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    justify-self: start;
+}
+
+.hero_date_timer {
+	grid-area: TIMER;
+	height: 10dvh;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* 3D Flip animation */
+
+.hero_date_img {
+	position: relative;
+	left: 1rem;
+	transform-style: preserve-3d;
+	transition: all 1.0s linear;
+}
+
+.hero_date_img:hover {
+	transform: rotateY(180deg);
+}
+
+.hero_gif {
+	position: absolute;
+	backface-visibility: hidden;
+	z-index: 1;
+} 
+
+.hero_image {
+	border-radius: 1rem;
+	height: 69%;
+	transform: rotateY(180deg);
+}
