@@ -1,9 +1,58 @@
-<h1>Título 1</h1>
-<h2>Título 2</h2>
-<h3>Título 3</h3>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut doloremque ad ab minima quasi, nulla accusamus harum incidunt earum? Cumque quibusdam quaerat libero laborum accusantium vero recusandae alias iste neque?</p>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut doloremque ad ab minima quasi, nulla accusamus harum incidunt earum? Cumque quibusdam quaerat libero laborum accusantium vero recusandae alias iste neque?</p>
-<p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa itaque, aut soluta iure incidunt deleniti maiores tempore saepe exercitationem fugiat ex adipisci eos modi quas corrupti dolor, cupiditate temporibus ut.</p>
-<a href="#">Ejemplo de Link</a>
-<a href="#">Ejemplo de link boton</a>
-<button type="button">Ejemplo de boton</button>
+---
+import HeadingTitles from "../Heading-Titles/Heading-Titles.astro";
+
+---
+
+<HeadingTitles heading="Typography" />
+<section class="container">
+	<h1>Título 1</h1>
+	<h2>Título 2</h2>
+	<h3>Título 3</h3>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut doloremque ad ab minima quasi, nulla accusamus harum incidunt earum? Cumque quibusdam quaerat libero laborum accusantium vero recusandae alias iste neque?</p>
+	<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut doloremque ad ab minima quasi, nulla accusamus harum incidunt earum? Cumque quibusdam quaerat libero laborum accusantium vero recusandae alias iste neque?</p>
+	<p class="small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa itaque, aut soluta iure incidunt deleniti maiores tempore saepe exercitationem fugiat ex adipisci eos modi quas corrupti dolor, cupiditate temporibus ut.</p>
+	<a class="link" href="#">Ejemplo de Link</a>
+	<a class="button" href="#">Ejemplo de link boton</a>
+	<button class="button" type="button">Ejemplo de boton</button>
+	<ul>
+		<li>List A</li>
+		<li>List B</li>
+		<li>List C</li>
+	</ul>
+	<ol>
+		<li>List 1</li>
+		<li>List 2</li>
+		<li>List 3</li>
+	</ol>
+	<ul>
+		<li>List A</li>
+		<li>List B</li>
+			<ul>
+				<li>List B1</li>
+				<li>List B2</li>
+			</ul>
+		<li>List C</li>
+	</ul>
+	<ol>
+		<li>List 1</li>
+		<li>List 2</li>
+			<ol>
+				<li>List 2.1</li>
+				<li>List 2.2</li>
+			</ol>
+		<li>List 3</li>
+	</ol>
+	<ol>
+		<li>List 1</li>
+		<li>List 2</li>
+			<ol>
+				<li>List 2.1</li>
+				<li>List 2.2</li>
+				<ol>
+					<li>List 2.2.1</li>
+					<li>List 2.2.2</li>
+				</ol>
+			</ol>
+		<li>List 3</li>
+	</ol>
+</section>

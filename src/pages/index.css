@@ -7,7 +7,7 @@ body, html {
 
 h1 {
 	font-family: 'Great Vibes', 'Times New Roman', Times, serif;
-	font-size: 3.6rem;
+	font-size: 3.8rem;
 	text-align: center;
 }
 h2 {
@@ -18,10 +18,11 @@ h3 {
 	font-weight: 600;
 	font-size: 1.2rem;
 }
-p, button, a, input, textarea, form {
+p, button, a, input, textarea, form, label {
 	font-weight: 300;
 	font-size: 1rem;
 }
+
 .small {
 	font-weight: 300;
 	font-size: 0.6rem;
@@ -41,4 +42,105 @@ p, button, a, input, textarea, form {
 	.container {
 		padding: 0 1rem;
 	}
+}
+
+button.button,
+a.button {
+	background-color: #33CCCC;
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	padding: 0.4rem 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 0.2rem;
+	transition: all 0.2s;
+}
+
+input, textarea {
+	transition: all 0.2s;
+}
+
+input[type=text], textarea {
+	padding: 0.4rem 1.2rem;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.2rem;
+}
+
+input[type=text]:focus, textarea:focus {
+	outline-offset: 0.1rem;	
+}
+
+button.button:hover,
+a.button:hover {
+	background-color: gold;
+	color: black;
+}
+
+button.button:focus,
+a.button:focus,
+a.link:focus {
+	outline-offset: 0.1rem;
+}
+
+a.link {
+	color: #33CCCC;
+}
+
+a.link:hover {
+	color: gold;
+}
+
+ul {
+	list-style: disc inside;
+}
+
+ol {
+	list-style: decimal inside;
+}
+
+ul > ul,
+ul > ol,
+ol > ol,
+ol > ul {
+	margin-left: 1rem;
+}
+
+table.table,
+table.table td,
+table.table th,
+table.table tr {
+	width: 100%;
+	border: 1px solid black;
+}
+
+table.table td,
+table.table th {
+	padding: 0.2rem;
+}
+
+table.table td:first-child,
+table.table th:first-child {
+	text-align: right;
+	width: 50%;
+	padding-right: 1rem;
+}
+
+table.table td:last-child,
+table.table th:last-child {
+	text-align: left;
+	width: 50%;
+	padding-left: 1rem;
+}
+
+table.table th {
+	font-weight: 600;
 }

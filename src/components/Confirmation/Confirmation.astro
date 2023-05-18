@@ -1,0 +1,14 @@
+---
+
+import HeadingTitles from '../Heading-Titles/Heading-Titles.astro';
+import ConfirmationForm from "./ConfirmationForm/ConfirmationForm";
+import './confirmation.css'
+---
+
+<HeadingTitles heading="Confirmar asistencia" />
+<section class="confirmation container">
+	<ConfirmationForm client:only="react"/>
+	<section class="confirmation_image">
+		<img class="confirmation_gif" src="/images/wedding-date.gif" alt="">
+	</section>
+</section>

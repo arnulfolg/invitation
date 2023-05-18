@@ -1,0 +1,64 @@
+.confirmation {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	gap: 1rem;
+	margin: 4rem auto 8rem auto;
+}
+
+.confirmation_image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form_input_title {
+	font-weight: 600;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: column;
+	gap: 1.4rem;
+}
+
+.form_section {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.form_section legend {
+	margin-bottom: 0.6rem;
+}
+
+.confirmation_gif {
+	width: 240px;
+	border-radius: 1rem;
+}
+
+.form_section_radio {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.2rem;
+}
+
+.form_section_radio input {
+	margin: 0;
+}
+
+.form_section__error {
+	background-color: coral;
+	padding: 0.2rem 1rem;
+	border-radius: 0.1rem;
+	color: white;
+	font-style: italic;
+}
+
+@media screen and (max-width: 666px) {
+	.confirmation {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
