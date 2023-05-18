@@ -1,7 +1,6 @@
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 
-
 interface FormValues {
 	fullName: string,
 	confirmation: string
@@ -9,7 +8,7 @@ interface FormValues {
 
 export default function ConfirmationForm() {
 	
-	const wpNumberLink: string = `https://wa.me/528331063870?text=`;
+	const wpNumberLink: string = `https://wa.me/528333434556?text=`;
 
 	const ConfirmationSchema = Yup.object().shape({
 		fullName: Yup.string()
@@ -42,44 +41,44 @@ export default function ConfirmationForm() {
 	}
 
 	return (
-	<Formik
-		initialValues={FormInitialValues}
-		validationSchema={ConfirmationSchema}
-		onSubmit={onSubmitAction}
-		>
-		{({ errors, touched }) => (
-			<Form className='form_group'>
-				<section className='form_section'>
-					<label className='form_input_title' htmlFor="fullName">Nombre y Apellido</label>
-					<Field type="text" id="fullName" name="fullName"/>
-					{errors.fullName && touched.fullName ? (
-						<span className='form_section__error'>{errors.fullName}</span>
-					) : null}
-				</section>
-
-				<fieldset className='form_section'>
-					<legend className='form_input_title'>¿Podrás asistir a la boda?</legend>
-					<section className='form_section_radio'>
-						<Field type="radio" id="si" name="confirmation" value="true"/>
-						<label htmlFor="si">Sí</label>
+		<Formik
+			initialValues={FormInitialValues}
+			validationSchema={ConfirmationSchema}
+			onSubmit={onSubmitAction}
+			>
+			{({ errors, touched }) => (
+				<Form className='form_group'>
+					<section className='form_section'>
+						<label className='form_input_title' htmlFor="fullName">Nombre y Apellido</label>
+						<Field type="text" id="fullName" name="fullName"/>
+						{errors.fullName && touched.fullName ? (
+							<span className='form_section__error'>{errors.fullName}</span>
+						) : null}
 					</section>
-					<section className='form_section_radio'>
-						<Field type="radio" id="no" name="confirmation" value="false"/>
-						<label htmlFor="no">No</label>
+
+					<fieldset className='form_section'>
+						<legend className='form_input_title'>¿Podrás asistir a la boda?</legend>
+						<section className='form_section_radio'>
+							<Field type="radio" id="si" name="confirmation" value="true"/>
+							<label htmlFor="si">Sí</label>
+						</section>
+						<section className='form_section_radio'>
+							<Field type="radio" id="no" name="confirmation" value="false"/>
+							<label htmlFor="no">No</label>
+						</section>
+						{errors.confirmation && touched.confirmation ? (
+							<span className='form_section__error'>{errors.confirmation}</span>
+						) : null}
+					</fieldset>
+
+					<section className='form_section'>
+						<button className='button' type="submit">Confirmar asistencia por WhatsApp</button>
 					</section>
-					{errors.confirmation && touched.confirmation ? (
-						<span className='form_section__error'>{errors.confirmation}</span>
-					) : null}
-				</fieldset>
 
-				<section className='form_section'>
-					<button className='button' type="submit">Confirmar asistencia por WhatsApp</button>
-				</section>
+				</Form>
+			)}
 
-			</Form>
-		)}
-
-    </Formik>
-  )
+		</Formik>
+	)
 }
 

@@ -36,12 +36,7 @@ p, button, a, input, textarea, form, label {
 	max-width: 1040px;
 	margin: 0 auto;
 	margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 666px) {
-	.container {
-		padding: 0 1rem;
-	}
+	padding: 0 1rem;
 }
 
 button.button,
@@ -143,4 +138,16 @@ table.table th:last-child {
 
 table.table th {
 	font-weight: 600;
+}
+
+@media screen and (max-width: 666px) {
+	table.table td:first-child,
+table.table th:first-child {
+	padding-right: 0.5rem;
+}
+
+table.table td:last-child,
+table.table th:last-child {
+	padding-left: 0.5rem;
+}
 }
