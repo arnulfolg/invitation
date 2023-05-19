@@ -1,16 +1,70 @@
 ---
 import HeadingTitles from '../Heading-Titles/Heading-Titles.astro';
+import 'photoswipe/style.css';
 import './gallery.css'
 ---
 
+
 <HeadingTitles heading="Galería" />
 <section class="gallery container">
-	<picture class="gallery_massonry">
-		<img class="gallery_image" src="https://live.staticflickr.com/65535/52815850012_737ef806c9_d.jpg" alt="">
-		<img class="gallery_image" src="https://live.staticflickr.com/65535/52818800629_da532c0472_d.jpg" alt="">
-		<img class="gallery_image" src="https://live.staticflickr.com/65535/52816819515_210d1136d1_d.jpg" alt="">
-		<img class="gallery_image" src="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_d.jpg" alt="">
-		<img class="gallery_image" src="https://live.staticflickr.com/65535/52816860523_0718bdaf61_d.jpg" alt="">
-		<img class="gallery_image" src="https://live.staticflickr.com/65535/52816602464_24ea5cbf74_d.jpg" alt="">
+	<picture class="gallery_massonry" id="my-gallery">
+		<a 
+			class="gallery_link" 
+			href="https://live.staticflickr.com/65535/52815850012_737ef806c9_d.jpg" 
+			target="_blank" 
+			data-pswp-width="1669" 
+			data-pswp-height="2500" >
+			<img class="gallery_image" src="https://live.staticflickr.com/65535/52815850012_737ef806c9_d.jpg" alt="">
+		</a>
+		<a 
+			class="gallery_link" 
+			href="https://live.staticflickr.com/65535/52818800629_da532c0472_d.jpg" 
+			target="_blank" 
+			data-pswp-width="1669" 
+			data-pswp-height="2500" >
+			<img class="gallery_image" src="https://live.staticflickr.com/65535/52818800629_da532c0472_d.jpg" alt="">
+		</a>
+		<a 
+			class="gallery_link" 
+			href="https://live.staticflickr.com/65535/52816819515_210d1136d1_d.jpg" 
+			target="_blank" 
+			data-pswp-width="1669" 
+			data-pswp-height="2500" >
+			<img class="gallery_image" src="https://live.staticflickr.com/65535/52816819515_210d1136d1_d.jpg" alt="">
+		</a>
+		<a 
+			class="gallery_link" 
+			href="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_d.jpg" 
+			target="_blank" 
+			data-pswp-width="1669" 
+			data-pswp-height="2500" >
+			<img class="gallery_image" src="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_d.jpg" alt="">
+		</a>
+		<a 
+			class="gallery_link" 
+			href="https://live.staticflickr.com/65535/52816860523_0718bdaf61_d.jpg" 
+			target="_blank" 
+			data-pswp-width="1669" 
+			data-pswp-height="2500" >
+			<img class="gallery_image" src="https://live.staticflickr.com/65535/52816860523_0718bdaf61_d.jpg" alt="">
+		</a>
+		<a 
+			class="gallery_link" 
+			href="https://live.staticflickr.com/65535/52816602464_24ea5cbf74_d.jpg" 
+			target="_blank" 
+			data-pswp-width="1669" 
+			data-pswp-height="2500" >
+			<img class="gallery_image" src="https://live.staticflickr.com/65535/52816602464_24ea5cbf74_d.jpg" alt="">
+		</a>
 	</picture>
 </section>
+
+<script>
+	import PhotoSwipeLightbox from 'photoswipe/lightbox';
+	const lightbox = new PhotoSwipeLightbox({
+		gallery: '#my-gallery',
+		children: 'a',
+		pswpModule: () => import('photoswipe')
+	});
+	lightbox.init();
+</script>
