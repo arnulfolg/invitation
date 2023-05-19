@@ -102,11 +102,17 @@
 	transform: rotateY(180deg);
 }
 
+.hero_image:hover .hero_image__front {
+	opacity: 0;
+}
+
 .hero_image:hover .hero_image__back {
 	opacity: 1;
 }
 
 .hero_image__front {
+	opacity: 1;
+	transition: opacity 1s linear;
 	position: absolute;
 	backface-visibility: hidden;
 	z-index: 1;
