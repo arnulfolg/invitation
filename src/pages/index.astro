@@ -35,9 +35,9 @@ import GiftList from '../components/GiftList/GiftList.astro';
 			data-tracking-host="https://events.usermaven.com"
 			data-autocapture="true"  
 			data-privacy-policy="strict" 
-			defer>
+			defer is:inline>
 		</script>
-		<script>window.usermaven = window.usermaven || (function(){(window.usermavenQ = window.usermavenQ || []).push(arguments);})</script>
+		<script is:inline>window.usermaven = window.usermaven || (function(){(window.usermavenQ = window.usermavenQ || []).push(arguments);})</script>
 	</head>
 	<body>
 		<section>
