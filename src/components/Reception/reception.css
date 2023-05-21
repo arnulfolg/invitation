@@ -17,6 +17,16 @@
 	grid-column: 1 / -1;
 }
 
+.dressing_code {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 3rem;
+}
+
+
 @media screen and (max-width: 666px) {
 	.reception {
 		grid-template-columns: 1fr;
