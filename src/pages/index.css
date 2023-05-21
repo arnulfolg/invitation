@@ -23,7 +23,7 @@ p, button, a, input, textarea, form, label {
 	font-size: 1rem;
 }
 
-.small {
+.small, .small a  {
 	font-weight: 300;
 	font-size: 0.6rem;
 }
@@ -90,8 +90,16 @@ a.link {
 	color: #33CCCC;
 }
 
+a.link_dark {
+	color: black;
+}
+
 a.link:hover {
 	color: gold;
+}
+
+a.link_dark:hover {
+	color: white;
 }
 
 ul {
