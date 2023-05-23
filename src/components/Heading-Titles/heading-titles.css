@@ -23,4 +23,5 @@
 	background-color: white;
 	padding: 0 1rem;
 	z-index: 1;
+	box-sizing: content-box;
 }

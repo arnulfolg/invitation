@@ -4,7 +4,7 @@ import Timer from '../Timer/Timer';
 import './hero.css'
 ---
 
-<section class="hero">
+<header class="hero">
 	<section class="hero_picture">
 		<img class="feature_image" src="https://live.staticflickr.com/65535/52818800629_05a9a789c6_k_d.jpg" alt="">
 		<h1 class="container">Arnulfo & Caissa</h1>
@@ -14,9 +14,9 @@ import './hero.css'
 			<p class="save_the_date">Domingo <span class="text_bold">19</span> <span class="text_bold">Noviembre</span></p>
 		</section>
 		<picture class="hero_image">
-			<video class="hero_image__front" src="/videos/ring.mp4" autoplay loop muted></video>
+			<video class="hero_image__front" src="/videos/ring.mp4" poster="/images/arch.gif" autoplay loop muted playsinline preload="auto"></video>
 			<img class="hero_image__back" src="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_w_d.jpg" alt="">
 		</picture>
 		<Timer client:only="react" />
 	</section>
-</section>
+</header>

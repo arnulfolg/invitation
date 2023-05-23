@@ -21,12 +21,12 @@ export default function Timer() {
 					{date_month}
 					<span className="small">meses</span>
 				</span>
-				<span className="">:</span>
+				<span className="date_colons">:</span>
 				<span className="date_day">
 					{date_day}
 					<span className="small">días</span>
 				</span>
-				<span className="">:</span>
+				<span className="date_colons">:</span>
 				<span className="date_hours">
 					{date_hours}
 					<span className="small">horas</span>

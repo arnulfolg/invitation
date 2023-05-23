@@ -35,6 +35,7 @@
 .confirmation_gif {
 	width: 240px;
 	border-radius: 1rem;
+	max-width: 50%;
 }
 
 .form_section_radio {

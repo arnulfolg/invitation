@@ -72,7 +72,7 @@ export default function ConfirmationForm() {
 					</fieldset>
 
 					<section className='form_section'>
-						<button className='button' type="submit">Confirmar asistencia por WhatsApp</button>
+						<button id='send_confirmation' className='button' type="submit">Confirmar asistencia por WhatsApp</button>
 					</section>
 
 				</Form>

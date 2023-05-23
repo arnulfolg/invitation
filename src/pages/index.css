@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body, html {
 	font-size: 20px;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -68,6 +75,7 @@ input[type=text], textarea {
 	justify-content: center;
 	align-items: center;
 	border-radius: 0.2rem;
+	width: 100%;
 }
 
 input[type=text]:focus, textarea:focus {
@@ -123,6 +131,8 @@ table.table th,
 table.table tr {
 	width: 100%;
 	border: 1px solid black;
+	border-collapse: collapse;
+	overflow: auto;
 }
 
 table.table td,
@@ -150,12 +160,32 @@ table.table th {
 
 @media screen and (max-width: 666px) {
 	table.table td:first-child,
-table.table th:first-child {
-	padding-right: 0.5rem;
+	table.table th:first-child {
+		padding-right: 0.5rem;
+	}
+
+	table.table td:last-child,
+	table.table th:last-child {
+		padding-left: 0.5rem;
+	}
 }
 
-table.table td:last-child,
-table.table th:last-child {
-	padding-left: 0.5rem;
-}
+@media screen and (max-width: 400px) {
+	.giftlist_cardTransfer table.table tr{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.giftlist_cardTransfer table.table tr > *{
+		width: auto;
+		padding: 0.3rem;
+		text-align: left;
+	}
+
+	table.table thead,
+	table.table tbody,
+	table.table tr {
+		border: none;
+	}
+	
 }
