@@ -157,6 +157,7 @@
 
 	.hero_image {
 		height: 20dvh;
+		left: auto;
 	}
 	.hero_date_text {
 		height: 10dvh;
