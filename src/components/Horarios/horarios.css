@@ -1,0 +1,23 @@
+.horarios_cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2.1rem;
+	margin: 4rem 0 8rem 0;
+	padding-inline: 6rem;
+}
+
+.horarios_cards .card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	justify-content: flex-start;
+	align-content: center;
+	text-align: center;
+}
+
+@media screen and (max-width: 666px) {
+	.horarios_cards {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 2rem;
+	}
+}
