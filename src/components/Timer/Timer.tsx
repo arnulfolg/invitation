@@ -4,14 +4,14 @@ import dayjs from 'dayjs'
 export default function Timer() {
 	
 	const d1: any = new Date(); //"now"
-	const d2: any = new Date("2023-11-19 17:30");  // some date
+	const d2: any = new Date("2023-10-19");  // some date
 	
 	const diff = Math.abs(d1-d2);  // difference in milliseconds
 	const date = dayjs(diff);
 	
 	const date_month = 0;
-	const date_day = date.format('D');
-	const date_hours = date.format('H');
+	const date_day = 0;
+	const date_hours = 0;
 
 	return (
 		<section className="hero_date_timer">
