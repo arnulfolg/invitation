@@ -2,60 +2,33 @@
 import HeadingTitles from '../Heading-Titles/Heading-Titles.astro';
 import 'photoswipe/style.css';
 import './gallery.css'
+
+const pictures = ['/images/corazones.jpeg',
+'/images/foto1.jpeg',
+'/images/hero.jpeg',
+'/images/pareja1.jpeg',
+'/images/pareja2.jpeg',
+'/images/pedidademano1.jpeg',
+'/images/pedidademano2.jpeg',
+'/images/pedidademano3.jpeg',
+'/images/pedidademano4.jpeg',
+'/images/pedidademano5.jpeg']
 ---
 
 
 <HeadingTitles heading="Galería" />
 <section class="gallery container">
 	<picture class="gallery_massonry" id="my-gallery">
-		<a 
+		{pictures.map((image: string) => {
+			return <a 
 			class="gallery_link" 
-			href="https://live.staticflickr.com/65535/52815850012_737ef806c9_b_d.jpg"
+			href={image}
 			target="_blank" 
 			data-pswp-width="1669" 
 			data-pswp-height="2500" >
-			<img class="gallery_image" src="https://live.staticflickr.com/65535/52815850012_737ef806c9_w_d.jpg" alt="" loading="lazy">
+			<img class="gallery_image" src={image} alt="" loading="lazy">
 		</a>
-		<a 
-			class="gallery_link" 
-			href="https://live.staticflickr.com/65535/52818800629_da532c0472_b_d.jpg"
-			target="_blank" 
-			data-pswp-width="1669" 
-			data-pswp-height="2500" >
-			<img class="gallery_image" src="https://live.staticflickr.com/65535/52818800629_da532c0472_w_d.jpg" alt="" loading="lazy">
-		</a>
-		<a 
-			class="gallery_link" 
-			href="https://live.staticflickr.com/65535/52816819515_210d1136d1_b_d.jpg"
-			target="_blank" 
-			data-pswp-width="1669" 
-			data-pswp-height="2500" >
-			<img class="gallery_image" src="https://live.staticflickr.com/65535/52816819515_210d1136d1_w_d.jpg" alt="" loading="lazy">
-		</a>
-		<a 
-			class="gallery_link" 
-			href="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_b_d.jpg"
-			target="_blank" 
-			data-pswp-width="1669" 
-			data-pswp-height="2500" >
-			<img class="gallery_image" src="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_w_d.jpg" alt="" loading="lazy">
-		</a>
-		<a 
-			class="gallery_link" 
-			href="https://live.staticflickr.com/65535/52816860523_0718bdaf61_b_d.jpg"
-			target="_blank" 
-			data-pswp-width="1669" 
-			data-pswp-height="2500" >
-			<img class="gallery_image" src="https://live.staticflickr.com/65535/52816860523_0718bdaf61_w_d.jpg" alt="" loading="lazy">
-		</a>
-		<a 
-			class="gallery_link" 
-			href="https://live.staticflickr.com/65535/52816602464_24ea5cbf74_b_d.jpg"
-			target="_blank" 
-			data-pswp-width="1669" 
-			data-pswp-height="2500" >
-			<img class="gallery_image" src="https://live.staticflickr.com/65535/52816602464_24ea5cbf74_w_d.jpg" alt="" loading="lazy">
-		</a>
+		})}
 	</picture>
 </section>
 
