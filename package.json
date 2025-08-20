@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.4",
-    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
-    "astro": "^3.4.0",
+    "astro": "^5.13.2",
     "astro-google-fonts-optimizer": "^0.2.2",
     "dayjs": "^1.11.7",
     "formik": "^2.2.9",
