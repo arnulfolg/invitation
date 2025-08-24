@@ -51,10 +51,10 @@
 }
 
 .form_section__error {
-	background-color: #ffe5e5;
+	background-color: var(--error-background);
 	padding: 0.2rem 1rem;
 	border-radius: 0.1rem;
-	color: #ac0000;
+	color: var(--error-text);
 	font-style: italic;
 }
 

@@ -1,6 +1,6 @@
 .timer {
 	font-size: 28px;
-	background: #fcf4e8;
+	background: var(--timer-background);
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;

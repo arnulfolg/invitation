@@ -6,7 +6,7 @@
 	object-fit: cover;
 	margin-top: 0;
 	object-position: 50% 30%;
-	background-color: #33CCCC;
+	background-color: var(--main-color);
 }
 
 .hero_picture {
@@ -19,8 +19,8 @@
 	position: absolute;
 	justify-self: center;
 	align-self: center;
-	color: #d99e08;
-	text-shadow: black 10px 8px 16px;
+	color: var(--accent-color);
+	text-shadow: var(--black) 10px 8px 16px;
 	margin: 0;
 }
 
