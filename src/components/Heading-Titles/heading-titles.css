@@ -10,7 +10,7 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: #33CCCC;
+	background: var(--main-color);
 	z-index: 0;
 	height: 6px;
 	width: 100%;
@@ -20,7 +20,7 @@
 .heading_titles h2 {
 	max-width: 50%;
 	text-align: center;
-	background-color: white;
+	background-color: var(--white);
 	padding: 0 1rem;
 	z-index: 1;
 	box-sizing: content-box;

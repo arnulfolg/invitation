@@ -16,12 +16,12 @@
     "@types/react-dom": "^19.1.7",
     "astro": "^5.13.2",
     "astro-google-fonts-optimizer": "^0.2.2",
-    "dayjs": "^1.11.7",
     "formik": "^2.2.9",
     "moment": "^2.29.4",
     "photoswipe": "^5.3.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "simplycountdown.js": "^3.0.1",
     "tailwindcss": "^4.1.12",
     "yup": "^1.1.1"
   }
