@@ -7,6 +7,7 @@
 	margin-top: 0;
 	object-position: 50% 30%;
 	background-color: var(--main-color);
+	filter: blur(1px) brightness(80%);
 }
 
 .hero_picture {
