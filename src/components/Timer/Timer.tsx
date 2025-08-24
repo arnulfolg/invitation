@@ -1,36 +1,26 @@
 import './timer.css'
-import dayjs from 'dayjs'
+import simplyCountdown from 'simplycountdown.js';
 
 export default function Timer() {
-	
-	const d1: any = new Date(); //"now"
-	const d2: any = new Date("2025-12-23");  // some date
-	
-	const diff = Math.abs(d1-d2);  // difference in milliseconds
-	const date = dayjs(diff);
-	
-	const date_month = 4;
-	const date_day = date.format('D');;
-	const date_hours = date.format('H');
+
+	setTimeout(() => {
+		simplyCountdown("#simplycountdown", {
+		   year: 2025,
+		   month: 12,
+		   day: 23,
+		    words: { // Custom labels, with lambda for plurals
+            days: { root: 'día', lambda: (root, n) => n > 1 ? root + 's' : root },
+            hours: { root: 'hora', lambda: (root, n) => n > 1 ? root + 's' : root },
+            minutes: { root: 'minuto', lambda: (root, n) => n > 1 ? root + 's' : root },
+        },
+	   });
+	}, 100);
 
 	return (
 		<section className="hero_date_timer">
 			<p className='small'>Estamos a:</p>
 			<p className="timer">
-				<span className="date_month">
-					{date_month}
-					<span className="small">meses</span>
-				</span>
-				<span className="date_colons">:</span>
-				<span className="date_day">
-					{date_day}
-					<span className="small">días</span>
-				</span>
-				<span className="date_colons">:</span>
-				<span className="date_hours">
-					{date_hours}
-					<span className="small">horas</span>
-				</span>
+				<div id="simplycountdown" className="simply-countdown"></div>
 			</p>
 		</section>
 	)
