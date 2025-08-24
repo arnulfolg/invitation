@@ -24,7 +24,7 @@
 	margin: 0;
 }
 
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 700px) {
 	.feature_image {
 		object-position: 50% 50%;
 	}
@@ -98,35 +98,13 @@
 	transition: all 1.0s linear;
 }
 
-.hero_image:hover {
-	transform: rotateY(180deg);
-}
-
-.hero_image:hover .hero_image__front {
-	opacity: 0;
-}
-
-.hero_image:hover .hero_image__back {
-	opacity: 1;
-}
-
 .hero_image__front {
-	opacity: 1;
-	transition: opacity 1s linear;
 	position: absolute;
 	backface-visibility: hidden;
 	z-index: 1;
 } 
 
-.hero_image__back {
-	opacity: 0;
-	transition: opacity 1s linear;
-	border-radius: 1rem;
-	height: 69%;
-	transform: rotateY(180deg);
-}
-
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 700px) {
 	.hero_date {
 		gap: 0 1rem;
 	}
@@ -136,7 +114,7 @@
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 700px) {
 	.hero_date {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);

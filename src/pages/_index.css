@@ -1,11 +1,11 @@
 :root {
 	/* --main-color: #33CCCC; */
 	--main-color: silver;
-	--accent-color: red;
+	--accent-color: #D22B2B;
 
 	--error-background: #ffe5e5;
 	--error-text: #ac0000;
-	--timer-background: #fcf4e8;
+	--timer-background: #ffe5e5;
 
 	--black: #000000;
 	--white: #FFFFFF;
@@ -61,7 +61,7 @@ p, button, a, input, textarea, form, label {
 
 button.button,
 a.button {
-	background-color: var(--main-color);
+	background-color: var(--accent-color);
 	color: var(--white);
 	font-weight: 600;
 	text-align: center;
@@ -97,8 +97,7 @@ input[type=text]:focus, textarea:focus {
 
 button.button:hover,
 a.button:hover {
-	background-color: var(--accent-color);
-	color: var(--black);
+	background-color: var(--error-text);
 }
 
 button.button:focus,
@@ -171,7 +170,7 @@ table.table th {
 	font-weight: 600;
 }
 
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 700px) {
 	table.table td:first-child,
 	table.table th:first-child {
 		padding-right: 0.5rem;
