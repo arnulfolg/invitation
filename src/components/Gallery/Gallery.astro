@@ -3,29 +3,67 @@ import HeadingTitles from '../Heading-Titles/Heading-Titles.astro';
 import 'photoswipe/style.css';
 import './gallery.css'
 
-const pictures = ['/images/corazones.jpeg',
-'/images/foto1.jpeg',
-'/images/hero.jpeg',
-'/images/pareja2.jpeg',
-'/images/pedidademano1.jpeg',
-'/images/pedidademano2.jpeg',
-'/images/pedidademano3.jpeg',
-'/images/pedidademano4.jpeg',
-'/images/pedidademano5.jpeg']
+const pictures = [
+	{
+		image: '/images/corazones.jpeg',
+		width: 1086,
+		height: 1448
+	},
+	{
+		image: '/images/foto1.jpeg',
+		width: 1086,
+		height: 1448
+	},
+	{
+		image: '/images/hero.jpeg',
+		width: 1280,
+		height: 960
+	},
+	{
+		image: '/images/pareja2.jpeg',
+		width: 960,
+		height: 720
+	},
+	{
+		image: '/images/pedidademano1.jpeg',
+		width: 960,
+		height: 1280
+	},
+	{
+		image: '/images/pedidademano2.jpeg',
+		width: 1200,
+		height: 1600
+	},
+	{
+		image: '/images/pedidademano3.jpeg',
+		width: 960,
+		height: 1280
+	},
+	{
+		image: '/images/pedidademano4.jpeg',
+		width: 960,
+		height: 1280
+	},
+	{
+		image: '/images/pedidademano5.jpeg',
+		width: 960,
+		height: 1280
+	},
+]
 ---
 
 
 <HeadingTitles heading="Galería" />
 <section class="gallery container">
 	<picture class="gallery_massonry" id="my-gallery">
-		{pictures.map((image: string) => {
+		{pictures.map((image: { image: string, width: number, height: number}) => {
 			return <a 
 			class="gallery_link" 
-			href={image}
+			href={image.image}
 			target="_blank" 
-			data-pswp-width="1669" 
-			data-pswp-height="2500" >
-			<img class="gallery_image" src={image} alt="" loading="lazy">
+			data-pswp-width={image.width} 
+			data-pswp-height={image.height} >
+			<img class="gallery_image" src={image.image} alt="" loading="lazy">
 		</a>
 		})}
 	</picture>
