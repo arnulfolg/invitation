@@ -1,15 +1,18 @@
 ---
 
 import Timer from '../Timer/Timer';
+import HeroTitle from './HeroTitle.astro';
 import './hero.css'
 ---
 
 <header class="hero">
 	<section class="hero_picture">
 		<img class="feature_image" src="images/hero.jpeg" alt="">
-		<h1 class="container">Oyuky & Daniel</h1>
+		<!-- <h1 class="container">Oyuky & Daniel</h1> -->
+		<HeroTitle />
 	</section>
 	<section class="hero_date container">
+		<p class="hero_date_heading" >Sé parte de nuestra historia de amor.</p>
 		<section class="hero_date_text">
 			<p class="save_the_date">Martes <span class="text_bold">23</span> <span class="text_bold">Diciembre</span></p>
 			<p class="save_the_date">2025</p>
