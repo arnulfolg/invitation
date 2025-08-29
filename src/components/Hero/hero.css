@@ -6,27 +6,42 @@
 	object-fit: cover;
 	margin-top: 0;
 	object-position: 50% 30%;
-	background-color: #33CCCC;
+	background-color: var(--main-color);
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
 }
 
 .hero_picture {
 	position: relative;
-	height: 50dvh;
 	display: grid;
+	grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+	& svg {
+		grid-column: 1 / 1;
+		grid-row: 1 / 1;
+	}
 }
 
 .hero_picture h1 {
 	position: absolute;
 	justify-self: center;
 	align-self: center;
-	color: #d99e08;
-	text-shadow: black 10px 8px 16px;
+	color: var(--accent-color);
+	text-shadow: var(--black) 10px 8px 16px;
 	margin: 0;
 }
 
-@media screen and (max-width: 666px) {
+@media screen and (min-width: 699px) {
+	svg {
+		height: 200px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 700px) {
 	.feature_image {
-		object-position: 50% 50%;
+		height: 30dvh;
 	}
 	.hero_picture h1 {
 		margin-top: 4rem;
@@ -38,7 +53,8 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, auto);
-	grid-template-areas: 'TEXT GIF'
+	grid-template-areas: 'HEADING HEADING'
+						 'TEXT GIF'
 						 'TIMER TIMER';
 	justify-content: center;
 	align-items: center;
@@ -71,7 +87,7 @@
 
 .hero_image {
 	grid-area: GIF;
-	height: 40dvh;
+	height: 30dvh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -80,7 +96,6 @@
 
 .hero_date_timer {
 	grid-area: TIMER;
-	height: 10dvh;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -98,35 +113,13 @@
 	transition: all 1.0s linear;
 }
 
-.hero_image:hover {
-	transform: rotateY(180deg);
-}
-
-.hero_image:hover .hero_image__front {
-	opacity: 0;
-}
-
-.hero_image:hover .hero_image__back {
-	opacity: 1;
-}
-
 .hero_image__front {
-	opacity: 1;
-	transition: opacity 1s linear;
 	position: absolute;
 	backface-visibility: hidden;
 	z-index: 1;
 } 
 
-.hero_image__back {
-	opacity: 0;
-	transition: opacity 1s linear;
-	border-radius: 1rem;
-	height: 69%;
-	transform: rotateY(180deg);
-}
-
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 700px) {
 	.hero_date {
 		gap: 0 1rem;
 	}
@@ -136,15 +129,23 @@
 	}
 }
 
-@media screen and (max-width: 375px) {
+.hero_date_heading {
+	grid-area: HEADING;
+	text-align: center;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 700px) {
 	.hero_date {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(3, auto);
 		grid-template-areas: 'GIF'
+							 'HEADING'
 							 'TEXT'
 							 'TIMER';
 		gap: 0.4rem;
+		height: 70dvh;
 	}
 
 	.hero_image__front, .hero_image__back {
@@ -161,8 +162,5 @@
 	}
 	.hero_date_text {
 		height: 10dvh;
-	}
-	.hero_date_timer {
-		height: 20dvh;
 	}
 }

@@ -1,22 +1,24 @@
 ---
 
 import Timer from '../Timer/Timer';
+import HeroTitle from './HeroTitle.astro';
 import './hero.css'
 ---
 
 <header class="hero">
 	<section class="hero_picture">
-		<img class="feature_image" src="https://live.staticflickr.com/65535/52935447212_a000094695_b_d.jpg" alt="">
-		<h1 class="container">Arnulfo & Caissa</h1>
+		<img class="feature_image" src="images/hero.jpeg" alt="">
+		<!-- <h1 class="container">Oyuky & Daniel</h1> -->
+		<HeroTitle />
 	</section>
 	<section class="hero_date container">
+		<p class="hero_date_heading" >Sé parte de nuestra historia de amor.</p>
 		<section class="hero_date_text">
-			<p class="save_the_date">Domingo <span class="text_bold">19</span> <span class="text_bold">Noviembre</span></p>
-			<p class="save_the_date">5:30pm</p>
+			<p class="save_the_date">Martes <span class="text_bold">23</span> <span class="text_bold">Diciembre</span></p>
+			<p class="save_the_date">2025</p>
 		</section>
 		<picture class="hero_image">
-			<video class="hero_image__front" src="/videos/ring.mp4" poster="/images/ring.gif" autoplay loop muted playsinline preload="auto"></video>
-			<img class="hero_image__back" src="https://live.staticflickr.com/65535/52815852952_65c9fc4d7c_w_d.jpg" alt="">
+			<img class="hero_image__front" src="/icons/ring.svg"></i>
 		</picture>
 		<Timer client:only="react" />
 	</section>

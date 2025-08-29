@@ -1,3 +1,16 @@
+:root {
+	/* --main-color: #33CCCC; */
+	--main-color: silver;
+	--accent-color: #D22B2B;
+
+	--error-background: #ffe5e5;
+	--error-text: #ac0000;
+	--timer-background: #ffe5e5;
+
+	--black: #000000;
+	--white: #FFFFFF;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -13,7 +26,7 @@ body, html {
 }
 
 h1 {
-	font-family: 'Great Vibes', 'Times New Roman', Times, serif;
+	font-family: 'Parisienne', 'Times New Roman', Times, serif;
 	font-size: 3.8rem;
 	text-align: center;
 }
@@ -48,8 +61,8 @@ p, button, a, input, textarea, form, label {
 
 button.button,
 a.button {
-	background-color: #33CCCC;
-	color: white;
+	background-color: var(--accent-color);
+	color: var(--white);
 	font-weight: 600;
 	text-align: center;
 	text-decoration: none;
@@ -69,7 +82,7 @@ input, textarea {
 input[type=text], textarea {
 	padding: 0.4rem 1.2rem;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--black);
 	border-width: 1px;
 	display: flex;
 	justify-content: center;
@@ -84,8 +97,7 @@ input[type=text]:focus, textarea:focus {
 
 button.button:hover,
 a.button:hover {
-	background-color: gold;
-	color: black;
+	background-color: var(--error-text);
 }
 
 button.button:focus,
@@ -95,19 +107,19 @@ a.link:focus {
 }
 
 a.link {
-	color: #33CCCC;
+	color: var(--main-color);
 }
 
 a.link_dark {
-	color: black;
+	color: var(--black);
 }
 
 a.link:hover {
-	color: gold;
+	color: var(--accent-color);
 }
 
 a.link_dark:hover {
-	color: white;
+	color: var(--white);
 }
 
 ul {
@@ -158,7 +170,7 @@ table.table th {
 	font-weight: 600;
 }
 
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 700px) {
 	table.table td:first-child,
 	table.table th:first-child {
 		padding-right: 0.5rem;
