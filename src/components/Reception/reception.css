@@ -13,6 +13,10 @@
 	gap: 0.4rem;
 }
 
+.reception_address__italics {
+	font-style: italic;
+}
+
 .reception_info {
 	grid-column: 1 / -1;
 }
