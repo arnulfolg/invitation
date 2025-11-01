@@ -8,7 +8,7 @@ interface FormValues {
 
 export default function ConfirmationForm() {
 	
-	const wpNumberLink: string = `https://wa.me/528333434556?text=`;
+	const wpNumberLink: string = `https://wa.me/528331428255?text=`;
 
 	const ConfirmationSchema = Yup.object().shape({
 		fullName: Yup.string()
@@ -24,12 +24,12 @@ export default function ConfirmationForm() {
 
 			if(values.confirmation === 'true') {
 				newConfirmationMessage = ` ${wpNumberLink}
-					¡Hola!, confirmo que Sí voy a asistir a la boda de Arnulfo y Caissa.
+					¡Hola!, confirmo que Sí voy a asistir a la boda de Oyuky y Daniel.
 					\nMi nombre es: ${values.fullName}`
 			} else {
 				newConfirmationMessage =  ` ${wpNumberLink}
 					Hola, mi nombre es ${values.fullName}.
-					\nLamento confirmar que no podré asistir a la boda de Arnulfo y Caissa.`
+					\nLamento confirmar que no podré asistir a la boda de Oyuky y Daniel.`
 			}
 
 			window.open(newConfirmationMessage)

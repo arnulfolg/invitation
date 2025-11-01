@@ -2,28 +2,16 @@
 	margin: 4rem auto 8rem auto;
 }
 
-.giftlist_cardTransfer {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: auto;
-	grid-template-areas: 'INFO INFO'
-						 'T_CAISSA T_ARNULFO';
-	gap: 1rem;
+table.table_caissa {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 1rem;
 }
 
 .giftlist_cardTransfer__information {
-	grid-area: INFO;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-}
-
-.table_caissa {
-	grid-area: T_CAISSA;
-}
-
-.table_arnulfo {
-	grid-area: T_ARNULFO;
 }
 
 .giftlist_cardTransfer__table {
@@ -48,10 +36,7 @@
 }
 
 @media screen and (max-width: 800px) {
-	.giftlist_cardTransfer {
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-areas: 'INFO'
-							 'T_CAISSA'
-							 'T_ARNULFO';
+	table.table_caissa {
+		width: 100%;
 	}
 }
