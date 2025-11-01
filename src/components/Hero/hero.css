@@ -80,9 +80,33 @@
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	grid-template-columns: repeat(2, auto);
+	grid-template-columns: repeat(3, auto);
 	grid-template-rows: repeat(2, auto);
-	gap: 0.1rem;
+	grid-template-areas: "SAVE_DAY SAVE_NUMBER SAVE_TEXT_1"
+							"SAVE_MONTH SAVE_MONTH SAVE_MONTH";
+	gap: 0.5rem 1rem;
+}
+
+.save_the_date_year {
+	font-size: 32px;
+	text-align: center;
+}
+
+.save_the_date_day {
+	grid-area: SAVE_DAY;
+}
+
+.save_the_date_number {
+	grid-area: SAVE_NUMBER;
+}
+
+.save_the_date_text_1 {
+	grid-area: SAVE_TEXT_1;
+}
+
+.save_the_date_month {
+	grid-area: SAVE_MONTH;
+	text-align: center;
 }
 
 .hero_image {

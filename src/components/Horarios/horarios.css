@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2.1rem;
-	margin: 4rem 0 8rem 0;
+	margin: 2rem 0 4rem 0;
 	padding-inline: 6rem;
 }
 
@@ -19,5 +19,6 @@
 	.horarios_cards {
 		grid-template-columns: repeat(1, 1fr);
 		gap: 2rem;
+		padding-inline: 1rem;
 	}
 }
